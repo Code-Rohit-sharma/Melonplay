@@ -1,109 +1,116 @@
-* {
+*{
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
 }
 
-body {
-    background: black;
-
-    &::before {
-        position: absolute;
-        content: "";
-        background: url('../images/trees-gdf54ce2a8_1280.jpg') no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        opacity: .5;
-        filter: blur(1px);
-        z-index: -1;
-    }
-
-    display: flex;
-    justify-content: center;
-}
-
-h2 {
-
-    width: 25%;
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-top: 8%;
-    font-size: 35px;
-
-    &::before {
-        font-family: 'Italianno', cursive;
-        content: "Melon";
-        color: rgb(106, 106, 218);
-        text-decoration: underline;
-    }
-
-    &::after {
-        content: "play";
-        color: white;
-        text-decoration: underline;
-    }
-}
-
-.container {
-    background: white;
-    width: 60vw;
-    height: 60vh;
-    display: block;
-    margin: auto;
-    margin-top: 8%;
-    border-radius: 12px;
+.signup-container{
+    // border: 2px solid black;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2 {
+        color: black;
+        font-size: 30px;
+        position:relative;
+        bottom: 5%;
+        &::before {
+            content: "Melon";
+            font-family: 'Italianno', cursive;
+            color: blue;
+        }
 
-    h3 {
-        font-size: 35px;
-    }
-
-    #input-tags {
-        // border: 2px dotted black;
-        width: 90%;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-
-        .input {
-            // border: 2px solid black;
-            width: 40%;
-            font-size: 18px;
-            margin: 3% 2%;
-
-            label {
-                font-size: 18px;
-                // color: blue;
-            }
-
-            input {
-                border: none;
-                border-bottom: 2px solid blue;
-                margin-top: 2%;
-                margin-left: 2%;
-                font-size: 15px;
-                padding: 6px 6px;
-                width: 90%;
-            }
+        &::after {
+            content: "Play";
+            color: black;
+            font-family: 'Roboto', sans-serif;
         }
     }
-
-    .btn {
-        width: 40%;
-        font-size: 18px;
-        padding: 5px 20px;
-        background: rgb(106, 106, 218);
-        color: white;
-        border: none;
+    .signup-box{
+        // border: 2px solid blue;
+        width: 60vw;
+        height: 50vh;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         border-radius: 10px;
-        cursor: pointer;
+        display: flex;
+        .signup-image{
+            // border: 2px solid black;
+            width: 25vw;
+            background: url('../images/signup.jpg') no-repeat center;
+            background-size: 25vw auto;
+        }
+        .signup-details{
+            // border: 2px solid blue;
+            width: 35vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                color: black;
+                font-size: 2vw;
+            }
+            .input-box{
+                // border: 2px solid black;
+                width: 30vw;
+                height: 35vh;
+                margin-top: 3%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .inp{
+                margin: 2% 0%;
+            }
+            .user-name{
+                color: orangered;
+                // border: 2px solid black;
+                border-bottom: 1px solid black;
+                width: 20vw;
+                input{
+                    margin-left: 2%;
+                    border: none;
+                    padding: 2% 3%;
+                    font-size: 1.2vw;
+                }
+            }
+            .user-password{
+                color: orangered;
+                // border: 2px solid black;
+                border-bottom: 1px solid black;
+                width: 20vw;
+                input{
+                    margin-left: 2%;
+                    border: none;
+                    padding: 2% 3%;
+                    font-size: 1.2vw;
+                }
+            }
+            .confirm-password{
+                color: orangered;
+                // border: 2px solid black;
+                border-bottom: 1px solid black;
+                width: 20vw;
+                input{
+                    margin-left: 2%;
+                    border: none;
+                    padding: 2% 3%;
+                    font-size: 1.2vw;
+                }
+            }
+            .signup-btn{
+                font-size: 1.5vw;
+                position: relative;
+                top: 10%;
+                right: 25%;
+                color: white;
+                background: orangered;
+                border: none;
+                padding: 1.5% 4%;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
     }
 }

@@ -1,38 +1,32 @@
 import React from 'react';
 import '../sass/login.css';
-import PropTypes from 'prop-types';
+import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaAngleUp, FaVolumeMute, FaVolumeUp, FaUserAlt, FaLock } from 'react-icons/fa';
 
-export default function Login(props) {
+export default function Login() {
     return (
         <>
-             <h1></h1> 
-            <div className="container">
-                <h2>Login To Your Account</h2>
-                <div className="login">
-                    <div className="input" id="email">
-                        <input type="email" name="" id="" placeholder="Email or Phone or Username" />
+            <div className="login-container">
+                <h2></h2>
+                <div className="login-box">
+                    <div className="login-image">
+
                     </div>
-                    <div className="input" id="password">
-                        <input type="password" name="" id="" placeholder="Password" />
-                    </div>
-                    <div className="anchor">
-                        <input type="checkbox" name="" id="keep-login" />Keep me Log in
-                        <a href="" id="forget-password">Forget Password</a>
-                    </div>
-                    <button className="btn">Log in</button>
-                    <div className="need-an-account">
-                        Need an Account? <a href="#">Signup</a>
+                    <div className="login-input">
+                        <h3>Login</h3>
+                        <div className="input-user inputs">
+                        <FaUserAlt/>
+                            <input type="text" placeholder='Enter Username Or E-mail'/>
+                        </div>
+                        <div className="input-user-password inputs">
+                            <FaLock/>
+                            <input type="password" placeholder='Enter Password' />
+                        </div>
+                        <button className="btn btn-login">
+                            Login
+                        </button>
                     </div>
                 </div>
             </div>
         </>
     )
 }
-
-// Login.prototypes={
-//     Sitename:PropTypes.string.isRequired
-// }
-
-// Login.defaultProps = {
-//     Sitename:"Melonplay"
-// }

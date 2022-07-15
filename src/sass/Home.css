@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.container {
+.Home-container {
   height: 93vh;
   width: 100vw;
   display: -webkit-box;
@@ -12,8 +12,9 @@
   display: flex;
 }
 
-.container .left {
+.Home-container .left {
   width: 60vw;
+  height: 92vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,17 +24,17 @@
           flex-direction: column;
 }
 
-.container .left .tag-line {
+.Home-container .left .tag-line {
   height: 7vh;
 }
 
-.container .left .image {
+.Home-container .left .image {
   height: 90vh;
   background: url("../images/bg1.jpg") no-repeat center;
-  background-size: 850px auto;
+  background-size: 60vw auto;
 }
 
-.container .right {
+.Home-container .right {
   width: 40vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,60 +51,61 @@
           animation-iteration-count: 1;
 }
 
-.container .right h2 {
+.Home-container .right h2 {
   text-align: center;
   margin-top: 5%;
   padding: 5px 10px;
 }
 
-.container .right h2::before {
+.Home-container .right h2::before {
   content: "Melon";
   color: blue;
   font-size: 40px;
   font-family: 'Italianno', cursive;
 }
 
-.container .right h2::after {
+.Home-container .right h2::after {
   content: "Play";
   color: black;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
 }
 
-.container .right h3 {
+.Home-container .right h3 {
   color: black;
   text-align: left;
-  font-size: 40px;
+  font-size: 3.5vw;
   margin-top: 5%;
 }
 
-.container .right h4 {
+.Home-container .right h4 {
   color: black;
   margin-top: 3%;
 }
 
-.container .right p {
+.Home-container .right p {
   color: black;
   margin-top: 2%;
+  font-size: 1.1vw;
 }
 
-.container .right .start-call-btn {
-  width: 200px;
+.Home-container .right .start-call-btn {
+  width: 15vw;
   margin-top: 5%;
   margin-left: 15%;
   background: blue;
   color: white;
-  font-size: 18px;
+  font-size: 1.3vw;
   padding: 5px 20px;
   border: none;
   border-radius: 20px;
 }
 
-.container .right .start-call-btn:hover {
+.Home-container .right .start-call-btn:hover {
   cursor: pointer;
 }
 
-.container .right .bottom {
+.Home-container .right .bottom {
   margin-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,34 +120,36 @@
   height: 32vh;
 }
 
-.container .right .bottom .about {
+.Home-container .right .bottom .about {
   margin-top: 1%;
   width: 450px;
   margin-left: 50px;
   text-align: left;
 }
 
-.container .right .bottom .about h5 {
+.Home-container .right .bottom .about h5 {
   display: inline;
-  font-size: 40px;
+  font-size: 3vw;
   color: black;
 }
 
-.container .right .bottom .about p {
+.Home-container .right .bottom .about p {
   color: black;
+  font-size: 1.2vw;
 }
 
-.container .right .bottom .know-more {
+.Home-container .right .bottom .know-more {
   margin-top: 5%;
-  font-size: 18px;
+  font-size: 1.2vw;
   padding: 5px 20px;
   background: orangered;
   color: whitesmoke;
   border-radius: 20px;
   margin-left: 50px;
+  width: 12vw;
 }
 
-.container .right .bottom .know-more:hover {
+.Home-container .right .bottom .know-more:hover {
   cursor: pointer;
 }
 

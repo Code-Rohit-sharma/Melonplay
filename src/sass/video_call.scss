@@ -5,7 +5,7 @@
 
 .video-call-container {
     // border: 2px solid black;
-    height: 92vh;
+    height: 96vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,18 +13,18 @@
 
     // overflow-y: scroll;
     .media-stream {
-        // border: 2px solid black;
+        // border: 1px solid black;
         position: absolute;
         height: 90vh;
-        width: 95vw;
-        border-radius: 20px;
-        box-shadow: 10px 7px 20px 10px grey;
+        width: 100vw;
+        border-radius: 10px;
+        // box-shadow: 10px 7px 20px 10px grey;
         display: flex;
         justify-content: center;
 
         video {
             // border: 2px solid black;
-            width: 90vw;
+            width: 100vw;
             height: 90vh;
         }
 

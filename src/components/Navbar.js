@@ -1,24 +1,22 @@
 // import React, { useState } from 'react'
 import '../sass/navbar.css';
+import { useState } from 'react';
 
 export default function Navbar() {
 
     // const [mystyle, setmystyle] = useState({
-    //     color: 'white',
-    //     backgroundColor: 'black'
+    //     top: "-100%",
     // });
 
     // const togglestyle = () => {
-    //     if (mystyle.color == 'white') {
+    //     if (mystyle.top == "-100%") {
     //         setmystyle({
-    //             color: 'black',
-    //             backgroundColor: 'white'
+    //             top: "20%"
     //         })
     //     }
-    //     else {
+    //     else{
     //         setmystyle({
-    //             color: 'white',
-    //             backgroundColor: 'black'
+    //             top:"-100%"
     //         })
     //     }
     // }
@@ -43,18 +41,18 @@ export default function Navbar() {
                             VideoCall
                         </a>
                     </li>
-                    {/* <li>
-                        <a href="/chatting">
-                            Chatting
-                        </a>
-                    </li> */}
-                    {/* <li>Contact Us</li> */}
                 </ul>
                 <div className="buttons">
                     <button className="btn btn-login">
-                        Login
+                        <a href="/Login">
+                            Login
+                        </a>
                     </button>
-                    <button className="btn btn-signup">Signup</button>
+                    <button className="btn btn-signup">
+                        <a href="/Signup">
+                            Signup
+                        </a>
+                    </button>
                 </div>
             </div>
         </>

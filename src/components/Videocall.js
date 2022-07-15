@@ -1,6 +1,6 @@
 import React from 'react';
 import '../sass/video_call.css';
-import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaAngleUp } from 'react-icons/fa';
+import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaAngleUp, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import Video1 from '../video/sample.mp4'
 import { useState } from 'react';
 
@@ -33,7 +33,7 @@ export default function Video_call() {
                         </div>
                         <div className="controls">
                             <div className="controls-mic">
-                                <FaMicrophone size={18} />
+                                <FaVolumeMute size={18} />
                             </div>
                             <div className="controls-video">
                                 <FaVideo size={18} />
@@ -48,7 +48,7 @@ export default function Video_call() {
                     <div className="participant participant-1">
                         <div className="participants-icons">
                             <div className="mic-icon">
-                                <FaMicrophone />
+                                <FaVolumeMute />
                             </div>
                             <div className="video-icon">
                                 <FaVideo />
@@ -58,7 +58,7 @@ export default function Video_call() {
                     <div className="participant participant-2">
                         <div className="participants-icons">
                             <div className="mic-icon">
-                                <FaMicrophone />
+                                <FaVolumeMute />
                             </div>
                             <div className="video-icon">
                                 <FaVideo />
@@ -68,7 +68,7 @@ export default function Video_call() {
                     <div className="participant participant-3">
                         <div className="participants-icons">
                             <div className="mic-icon">
-                                <FaMicrophone />
+                                <FaVolumeMute />
                             </div>
                             <div className="video-icon">
                                 <FaVideo />
@@ -78,7 +78,7 @@ export default function Video_call() {
                     <div className="participant participant-4">
                         <div className="participants-icons">
                             <div className="mic-icon">
-                                <FaMicrophone />
+                                <FaVolumeMute />
                             </div>
                             <div className="video-icon">
                                 <FaVideo />

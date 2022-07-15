@@ -78,10 +78,14 @@ body {
             border-radius: 10px;
             background: white;
             border: 1px solid blue;
-            color: blue;
-
+            a{
+                color: blue;
+                text-decoration: none;
+            }
             &:hover {
-                color: white;
+                a{
+                    color: white;
+                }
                 background-color: blue;
                 cursor: pointer;
                 scale: 1.1;
@@ -97,8 +101,14 @@ body {
             background: white;
             border: 1px solid orangered;
             color: orangered;
-
+            a{
+                color: orangered;
+                text-decoration: none;
+            }
             &:hover {
+                a{
+                    color: white;
+                }
                 cursor: pointer;
                 background: orangered;
                 color: white;

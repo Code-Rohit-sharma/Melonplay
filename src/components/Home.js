@@ -4,7 +4,7 @@ import '../sass/Home.css';
 export default function Home() {
     return (
         <>
-            <div className="container">
+            <div className="Home-container">
                 <div className="left">
                     <div className="tag-line">
                         <h2></h2>
