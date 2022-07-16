@@ -1,88 +1,69 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-.video-call-container {
+.video-container{
     // border: 2px solid black;
-    height: 96vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    // overflow-y: scroll;
-    .media-stream {
-        // border: 1px solid black;
-        position: absolute;
-        height: 90vh;
+    height: 100vh;
+    .media-stream{
+        // border: 2px solid blue;
+        height: 100vh;
         width: 100vw;
-        border-radius: 10px;
-        // box-shadow: 10px 7px 20px 10px grey;
-        display: flex;
-        justify-content: center;
-
-        video {
-            // border: 2px solid black;
+        video{
             width: 100vw;
-            height: 90vh;
+            height: 100vh;
         }
-
-        .camera {
+        .back-button{
             // border: 2px solid black;
-            // background: white;
+            color: black;
+            background: white;
             position: absolute;
-            width: 80px;
-            height: 150px;
-            right: 0px;
+            z-index: +1;
+            left: 1%;
+            top: 2%;
+            padding: 4px 4px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px 5px grey;
+        }
+        .self-camera{
+            position: absolute;
+            right: 1%;
+            top: 1%;
+            width: 10vw;
+            height: 20vh;
+            // border: 2px solid black;
             display: flex;
             flex-direction: column;
             // justify-content: center;
             align-items: center;
-
-            .our-camera {
+            .camera{
                 // border: 2px solid black;
-                background-color: white;
-                width: 80px;
-                height: 80px;
+                width: 6vw;
+                height: 10vh;
                 border-radius: 50%;
-                box-shadow: 5px 5px 10px grey;
-            }
-
-            .controls {
-                // border: 2px solid black;
-                // margin-bottom: 2%;
-                width: 200px;
-                height: 30px;
-                color: black;
-                display: flex;
-                justify-content: center;
-
-                .controls-mic {
-                    margin-right: 5%;
-                    color: blue;
-                }
-
-                .controls-video {
-                    margin-left: 3%;
-                }
-            }
-
-            .angle-up {
-                // border: 2px solid black;
-                color: black;
-                width: 20px;
-                height: 20px;
-                display: flex;
-                justify-content: center;
                 background: white;
-                border-radius: 50%;
-                box-shadow: 2px 2px 5px 5px grey;
-                cursor: pointer;
+                box-shadow: 2px 2px 5px 3px grey;
+            }
+            .buttons-toggle{
+                // border: 2px solid black;
+                height: 4vh;
+                width: 9vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .self-microphone{
+                    // border: 2px solid black;
+                    position: relative;
+                    right: 20%;
+                    color: rgb(0, 0, 255);
+                    cursor: pointer;
+                }
+                .self-video{
+                    // border: 2px solid black;
+                    color: black;
+                    position: relative;
+                    left: 20%;
+                    cursor: pointer;
+                }
             }
         }
     }
-
     .participants {
         // border: 2px solid black;
         width: 100vw;

@@ -41,13 +41,45 @@
 
 .signup-container .signup-box {
   width: 60vw;
-  height: 50vh;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 10px;
+  height: 60vh;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation-name: signup-box;
+          animation-name: signup-box;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes signup-box {
+  from {
+    opacity: 0;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 0px grey;
+            box-shadow: 0px 0px 0px grey;
+  }
+  to {
+    opacity: 1;
+    border-radius: 20px;
+  }
+}
+
+@keyframes signup-box {
+  from {
+    opacity: 0;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 0px grey;
+            box-shadow: 0px 0px 0px grey;
+  }
+  to {
+    opacity: 1;
+    border-radius: 20px;
+  }
 }
 
 .signup-container .signup-box .signup-image {
@@ -68,6 +100,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .signup-container .signup-box .signup-details h3 {
@@ -77,7 +112,7 @@
 
 .signup-container .signup-box .signup-details .input-box {
   width: 30vw;
-  height: 35vh;
+  height: 50vh;
   margin-top: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +130,7 @@
 }
 
 .signup-container .signup-box .signup-details .inp {
-  margin: 2% 0%;
+  margin: 3% 0%;
 }
 
 .signup-container .signup-box .signup-details .user-name {
@@ -105,6 +140,19 @@
 }
 
 .signup-container .signup-box .signup-details .user-name input {
+  margin-left: 2%;
+  border: none;
+  padding: 2% 3%;
+  font-size: 1.2vw;
+}
+
+.signup-container .signup-box .signup-details .user-email {
+  color: orangered;
+  border-bottom: 1px solid black;
+  width: 20vw;
+}
+
+.signup-container .signup-box .signup-details .user-email input {
   margin-left: 2%;
   border: none;
   padding: 2% 3%;

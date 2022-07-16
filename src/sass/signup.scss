@@ -1,3 +1,81 @@
+// $btn-text-size: 1.5;
+
+// @mixin setFontSize($size) {
+//     font-size: calc((1vw + 1vh) * ($size / 2)) !important;
+// }
+
+// .signup-wrapper {
+//     overflow: scroll;
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 0;
+//     background-color: rgba(216, 12, 12, 0.7);
+
+//     .signup-container {
+//         position: absolute;
+//         width: 100vw;
+//         height: 70vh;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         .text-signup {
+//             flex: 1;
+//             padding: 20px;
+//             width: 20vw;
+//             text-align: start;
+//             font-size: xx-large;
+//             color: white;
+//             h2{
+//                 @include setFontSize($btn-text-size+4);
+//             }
+//         }
+
+//         .signup {
+//             padding: 20px;
+//             margin: 20px;
+//             position: relative;
+//             top: 35%;
+//             left: 20%;
+//             height: 50vh;
+//             width: 38vw;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: space-evenly;
+
+//             transform: translate(-55%, -50%);
+//             background-color: rgba(#ffffff, 0.9);
+//             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+//             border-radius: 5px;
+
+//             .signup-input {
+//                 @include setFontSize($btn-text-size);
+//                 width: 25vw;
+//                 height: 10vh;
+//             }
+
+//             .signup-signupBtn {
+//                 @include setFontSize($btn-text-size);
+//                 height: 5vh;
+//                 width: 12vw;
+//             }
+
+//             .signup-registerBtn {
+//                 @include setFontSize($btn-text-size);
+//                 height: 5vh;
+//                 width: 18vw;
+//                 padding: 20px !important;
+//             }
+
+//         }
+//     }
+// }
 *{
     margin: 0px;
     padding: 0px;
@@ -30,10 +108,24 @@
     .signup-box{
         // border: 2px solid blue;
         width: 60vw;
-        height: 50vh;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        border-radius: 10px;
+        height: 60vh;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
+        border-radius: 20px;
         display: flex;
+        animation-name: signup-box;
+        animation-iteration-count: 1;
+        animation-duration: 1.2s;
+        @keyframes signup-box {
+            from{
+                opacity: 0;
+                border-radius: 0px;
+                box-shadow: 0px 0px 0px grey;
+            }
+            to{
+                opacity: 1;
+                border-radius: 20px;
+            }
+        }
         .signup-image{
             // border: 2px solid black;
             width: 25vw;
@@ -41,11 +133,11 @@
             background-size: 25vw auto;
         }
         .signup-details{
-            // border: 2px solid blue;
             width: 35vw;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             h3{
                 color: black;
                 font-size: 2vw;
@@ -53,7 +145,7 @@
             .input-box{
                 // border: 2px solid black;
                 width: 30vw;
-                height: 35vh;
+                height: 50vh;
                 margin-top: 3%;
                 display: flex;
                 flex-direction: column;
@@ -61,9 +153,20 @@
                 justify-content: center;
             }
             .inp{
-                margin: 2% 0%;
+                margin: 3% 0%;
             }
             .user-name{
+                color: orangered;
+                border-bottom: 1px solid black;
+                width: 20vw;
+                input{
+                    margin-left: 2%;
+                    border: none;
+                    padding: 2% 3%;
+                    font-size: 1.2vw;
+                }
+            }
+            .user-email{
                 color: orangered;
                 // border: 2px solid black;
                 border-bottom: 1px solid black;

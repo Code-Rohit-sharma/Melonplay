@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import '../sass/video_call.css';
-import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaAngleUp, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
-import Video1 from '../video/sample.mp4'
+import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaReply, FaVolumeMute, FaAngleUp } from 'react-icons/fa';
+import userContext from './UserContext';
+import Video1 from "../video/sample.mp4";
 import { useState } from 'react';
 
 export default function Video_call() {
+    const { setNavVisible } = useContext(userContext);
+
+    useEffect(() => {
+        setNavVisible(false);
+        return () => {
+            setNavVisible(true);
+        }
+    }, [])
 
     const [Style, setMyStyle] = useState({
         bottom: '-20px'
@@ -25,22 +34,24 @@ export default function Video_call() {
 
     return (
         <>
-            <div className="video-call-container">
+            <div className="video-container">
                 <div className="media-stream">
                     <video src={Video1} controls="True" />
-                    <div className="camera">
-                        <div className="our-camera">
+                    <div className="back-button">
+                        <a href="/">
+                            <FaReply />
+                        </a>
+                    </div>
+                    <div className="self-camera">
+                        <div className="camera" onClick={toggle}>
                         </div>
-                        <div className="controls">
-                            <div className="controls-mic">
-                                <FaVolumeMute size={18} />
+                        <div className="buttons-toggle">
+                            <div className="self-microphone">
+                                <FaMicrophone size={18} />
                             </div>
-                            <div className="controls-video">
+                            <div className="self-video">
                                 <FaVideo size={18} />
                             </div>
-                        </div>
-                        <div className="angle-up" onClick={toggle}>
-                            <FaAngleUp />
                         </div>
                     </div>
                 </div>

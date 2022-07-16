@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../sass/Home.css';
+import userContext from './UserContext';
 
 export default function Home() {
     return (
         <>
-            <div className="Home-container">
+            <div className="container">
                 <div className="left">
                     <div className="tag-line">
                         <h2></h2>
@@ -18,7 +19,9 @@ export default function Home() {
                     <p>Unlimited Access of Video Calling & Screen Sharing.</p>
                     <p>Stream Media , Movies With Your Friends.</p>
                     <button className="start-call-btn">
-                        Start Video Call
+                        <a href="/Videocall">
+                            Start Video Call
+                        </a>
                     </button>
                     <div className="bottom">
                         <div className="about">
@@ -26,7 +29,9 @@ export default function Home() {
                             <p>Talk With You Friends & Colleagues AnyWhere AnyTime.</p>
                         </div>
                         <button className="know-more">
-                            Read More
+                            <a href="/about">
+                                Read More
+                            </a>
                         </button>
                     </div>
                 </div>

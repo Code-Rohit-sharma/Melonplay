@@ -1,25 +1,23 @@
-// import React, { useState } from 'react'
+import React, { useContext } from 'react';
 import '../sass/navbar.css';
-import { useState } from 'react';
+import userContext from './UserContext'
+import { logout } from '../utils/auth';
+
 
 export default function Navbar() {
+    const { user } = useContext(userContext);
 
-    // const [mystyle, setmystyle] = useState({
-    //     top: "-100%",
-    // });
+    const signOutText =
+        <>
+            <a className='username' >hi, {user ? user.displayName : "user"}!</a>
+            <button onClick={logout} className='signout-btn'>signout</button>
+        </>
 
-    // const togglestyle = () => {
-    //     if (mystyle.top == "-100%") {
-    //         setmystyle({
-    //             top: "20%"
-    //         })
-    //     }
-    //     else{
-    //         setmystyle({
-    //             top:"-100%"
-    //         })
-    //     }
-    // }
+    const authOpt = (
+        <>
+            <a href='/login' className='btn btn-login'>login</a>
+            <a href='/register' className='btn btn-signup'>register</a>
+        </>);
 
     return (
         <>
@@ -43,16 +41,7 @@ export default function Navbar() {
                     </li>
                 </ul>
                 <div className="buttons">
-                    <button className="btn btn-login">
-                        <a href="/Login">
-                            Login
-                        </a>
-                    </button>
-                    <button className="btn btn-signup">
-                        <a href="/Signup">
-                            Signup
-                        </a>
-                    </button>
+                    {user ? signOutText : authOpt}
                 </div>
             </div>
         </>

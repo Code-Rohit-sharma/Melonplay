@@ -4,7 +4,7 @@
     overflow: hidden;
 }
 
-.Home-container {
+.container {
     // border: 2px solid black;
     height: 93vh;
     width: 100vw;
@@ -13,7 +13,6 @@
     .left {
         width: 60vw;
         // border: 2px solid black;
-        height: 92vh;
         display: flex;
         flex-direction: column;
 
@@ -26,7 +25,7 @@
             // border: 2px solid red;
             height: 90vh;
             background: url('../images/bg1.jpg') no-repeat center;
-            background-size: 60vw auto;
+            background-size: 850px auto;
         }
     }
 
@@ -61,7 +60,7 @@
         h3 {
             color: black;
             text-align: left;
-            font-size: 3.5vw;
+            font-size: 40px;
             margin-top: 5%;
         }
 
@@ -73,19 +72,21 @@
         p {
             color: black;
             margin-top: 2%;
-            font-size: 1.1vw;
         }
 
         .start-call-btn {
-            width: 15vw;
+            width: 200px;
             margin-top: 5%;
             margin-left: 15%;
             background: blue;
             color: white;
-            font-size: 1.3vw;
+            font-size: 18px;
             padding: 5px 20px;
             border: none;
             border-radius: 20px;
+            a{
+                color: whitesmoke;
+            }
             &:hover{
                 cursor: pointer;
             }
@@ -107,24 +108,26 @@
                 text-align: left;
                 h5 {
                     display: inline;
-                    font-size: 3vw;
+                    font-size: 40px;
                     color: black;
                 }
                 p{
                     color: black;
-                    font-size: 1.2vw;
                 }
             }
 
             .know-more {
                 margin-top: 5%;
-                font-size: 1.2vw;
+                font-size: 18px;
                 padding: 5px 20px;
                 background: orangered;
                 color: whitesmoke;
                 border-radius: 20px;
                 margin-left: 50px;
-                width: 12vw;
+                border-width: 1px;
+                a{
+                    color: whitesmoke;
+                }
                 &:hover{
                     cursor: pointer;
                 }

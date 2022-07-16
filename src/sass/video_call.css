@@ -1,108 +1,86 @@
-* {
-  margin: 0px;
-  padding: 0px;
+.video-container {
+  height: 100vh;
 }
 
-.video-call-container {
-  height: 96vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.video-call-container .media-stream {
-  position: absolute;
-  height: 90vh;
+.video-container .media-stream {
+  height: 100vh;
   width: 100vw;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.video-call-container .media-stream video {
+.video-container .media-stream video {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 }
 
-.video-call-container .media-stream .camera {
-  position: absolute;
-  width: 80px;
-  height: 150px;
-  right: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.video-call-container .media-stream .camera .our-camera {
-  background-color: white;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  -webkit-box-shadow: 5px 5px 10px grey;
-          box-shadow: 5px 5px 10px grey;
-}
-
-.video-call-container .media-stream .camera .controls {
-  width: 200px;
-  height: 30px;
+.video-container .media-stream .back-button {
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.video-call-container .media-stream .camera .controls .controls-mic {
-  margin-right: 5%;
-  color: blue;
-}
-
-.video-call-container .media-stream .camera .controls .controls-video {
-  margin-left: 3%;
-}
-
-.video-call-container .media-stream .camera .angle-up {
-  color: black;
-  width: 20px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: white;
+  position: absolute;
+  z-index: +1;
+  left: 1%;
+  top: 2%;
+  padding: 4px 4px;
   border-radius: 50%;
-  -webkit-box-shadow: 2px 2px 5px 5px grey;
-          box-shadow: 2px 2px 5px 5px grey;
+  -webkit-box-shadow: 2px 2px 10px 5px grey;
+          box-shadow: 2px 2px 10px 5px grey;
+}
+
+.video-container .media-stream .self-camera {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  width: 10vw;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-container .media-stream .self-camera .camera {
+  width: 6vw;
+  height: 10vh;
+  border-radius: 50%;
+  background: white;
+  -webkit-box-shadow: 2px 2px 5px 3px grey;
+          box-shadow: 2px 2px 5px 3px grey;
+}
+
+.video-container .media-stream .self-camera .buttons-toggle {
+  height: 4vh;
+  width: 9vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-container .media-stream .self-camera .buttons-toggle .self-microphone {
+  position: relative;
+  right: 20%;
+  color: blue;
   cursor: pointer;
 }
 
-.video-call-container .participants {
+.video-container .media-stream .self-camera .buttons-toggle .self-video {
+  color: black;
+  position: relative;
+  left: 20%;
+  cursor: pointer;
+}
+
+.video-container .participants {
   width: 100vw;
   height: 30vh;
   display: -webkit-box;
@@ -120,7 +98,7 @@
           transition-duration: .5s;
 }
 
-.video-call-container .participants .participant {
+.video-container .participants .participant {
   background: white;
   width: 20vw;
   height: 20vh;
@@ -128,7 +106,7 @@
   border-radius: 20px;
 }
 
-.video-call-container .participants .participant .participants-icons {
+.video-container .participants .participant .participants-icons {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,16 +116,16 @@
   top: 80%;
 }
 
-.video-call-container .participants .participant .participants-icons .mic-icon {
+.video-container .participants .participant .participants-icons .mic-icon {
   margin-right: 5%;
   color: blue;
 }
 
-.video-call-container .participants .participant .participants-icons .mic-icon:hover {
+.video-container .participants .participant .participants-icons .mic-icon:hover {
   cursor: pointer;
 }
 
-.video-call-container .participants .participant .participants-icons .video-icon:hover {
+.video-container .participants .participant .participants-icons .video-icon:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=video_call.css.map */

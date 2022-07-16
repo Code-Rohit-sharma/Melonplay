@@ -43,8 +43,8 @@
   border-radius: 20px;
   width: 65vw;
   height: 60vh;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,6 +54,30 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-animation-name: login-box;
+          animation-name: login-box;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes login-box {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes login-box {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .login-container .login-box .login-image {

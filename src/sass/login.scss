@@ -1,3 +1,81 @@
+// $btn-text-size: 1.5;
+
+// @mixin setFontSize($size) {
+//     font-size: calc((1vw + 1vh) * ($size / 2)) !important;
+// }
+
+// .login-wrapper {
+//     overflow: scroll;
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 0;
+//     background-color: rgba(216, 12, 12, 0.7);
+
+//     .login-container {
+//         position: absolute;
+//         width: 100vw;
+//         height: 70vh;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         .text-login {
+//             flex: 1;
+//             padding: 20px;
+//             width: 20vw;
+//             text-align: start;
+//             font-size: xx-large;
+//             color: white;
+//             h2{
+//                 @include setFontSize($btn-text-size+4);
+//             }
+//         }
+
+//         .login {
+//             margin: 20px;
+//             position: relative;
+//             top: 35%;
+//             left: 20%;
+//             height: 50vh;
+//             width: 38vw;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: space-evenly;
+
+//             transform: translate(-55%, -50%);
+//             background-color: rgba(#ffffff, 0.9);
+//             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+//             border-radius: 5px;
+
+//             .login-input {
+//                 @include setFontSize($btn-text-size);
+//                 width: 25vw;
+//                 height: 10vh;
+//             }
+
+//             .login-loginBtn {
+//                 @include setFontSize($btn-text-size);
+//                 height: 5vh;
+//                 width: 12vw;
+//             }
+
+//             .login-registerBtn {
+//                 @include setFontSize($btn-text-size);
+//                 height: 5vh;
+//                 width: 18vw;
+//                 padding: 20px !important;
+//             }
+
+//         }
+//     }
+// }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -38,12 +116,23 @@
         width: 65vw;
         height: 60vh;
         // box-shadow: 10px 10px 20px 10px grey;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 40px 4px;
         // box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
         display: flex;
         // flex-direction: column;
         align-items: center;
         justify-content: center;
+        animation-name: login-box;
+        animation-iteration-count: 1;
+        animation-duration: 1.2s;
+        @keyframes login-box {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
         .login-image{
             // border: 2px solid blue;
             width: 30vw;

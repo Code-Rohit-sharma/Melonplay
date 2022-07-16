@@ -1,31 +1,22 @@
-import React from "react";
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Videocall from './components/Videocall';
-import About from './components/About';
-
-import {
-  BrowserRouter as Router, Routes, Route, useNavigate
-} from "react-router-dom";
-import { VideoCall } from "@material-ui/icons";
+import AppRouter from './components/AppRouter';
+import userContext from './components/UserContext';
+import { authState } from './utils/auth';
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [showNav, setNavVisible] = useState(true);
+
+  authState((user) => setUser(user))
+
   return (
     <>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Videocall' element={<Videocall />} />
-          <Route path='/Login' exact element={<Login/>}></Route>
-          <Route path='/Signup' exace element={<Signup/>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <userContext.Provider value={{ user, setUser , setNavVisible }}>
+        { showNav ? <Navbar /> : null}
+        <AppRouter />
+      </userContext.Provider>
     </>
   );
 }
